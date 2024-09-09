@@ -2,7 +2,7 @@
 
 USER_ID := $(shell id -u)
 GROUP_ID := $(shell id -g)
-DOCKER_USER := ${USER_ID}:${GROUP_ID}
+export DOCKER_USER := ${USER_ID}:${GROUP_ID}
 
 CURRENT_DIR := $(shell pwd)
 STYLE_CHECK_IGNORE := $(shell paste -sd, phpcs_ignore.txt)
