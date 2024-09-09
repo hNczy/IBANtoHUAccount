@@ -16,5 +16,8 @@
   },
   "require-dev": {
     "phpunit/phpunit": "*"
+  },
+  "config": {
+    "sort-packages": true
   }
 }
