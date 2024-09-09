@@ -1,0 +1,49 @@
+version: "3.6"
+services:
+  phpunit-php55:
+    build:
+      context: .
+      args:
+        - COMPOSER_AUTH
+        - PHP_VERSION=5.5.38
+    user: $DOCKER_USER
+    volumes:
+      - .:/app
+      - /app/vendor
+      - ./reports/php55:/app/reports
+
+  phpunit-php56:
+    build:
+      context: .
+      args:
+        - COMPOSER_AUTH
+        - PHP_VERSION=5.6.40
+    user: $DOCKER_USER
+    volumes:
+      - .:/app
+      - /app/vendor
+      - ./reports/php56:/app/reports
+
+  phpunit-php70:
+    build:
+      context: .
+      args:
+        - COMPOSER_AUTH
+        - PHP_VERSION=7.0.33
+    user: $DOCKER_USER
+    volumes:
+      - .:/app
+      - /app/vendor
+      - ./reports/php70:/app/reports
+
+  phpunit-php71:
+    build:
+      context: .
+      args:
+        - COMPOSER_AUTH
+        - PHP_VERSION=7.1.33
+    user: $DOCKER_USER
+    volumes:
+      - .:/app
+      - /app/vendor
+      - ./reports/php71:/app/reports
