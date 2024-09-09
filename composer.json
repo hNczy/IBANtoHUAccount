@@ -1,20 +1,23 @@
 {
-  "name": "hasznaltauto/template-php-lib",
-  "description": "Library for template-php-lib",
+  "name": "hnczy/iban-to-hu-account",
+  "description": "Library for extract the simple 3 x 8 number hungarian bank account number from the IBAN account.",
   "autoload": {
     "psr-4": {
-      "TemplatePhpLib\\": "src/"
+      "IBANtoHUAccount\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "TemplatePhpLib\\": "test/"
+      "IBANtoHUAccount\\": "test/"
     }
   },
   "require": {
     "php": ">=5.5"
   },
   "require-dev": {
-    "phpunit/phpunit": "^4"
+    "phpunit/phpunit": "*"
+  },
+  "config": {
+    "sort-packages": true
   }
 }
