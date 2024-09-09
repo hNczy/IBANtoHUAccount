@@ -1,4 +1,4 @@
-ARG PHP_VERSION
+ARG PHP_VERSION=latest
 
 FROM php:${PHP_VERSION} AS base
 
