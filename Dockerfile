@@ -43,4 +43,4 @@ WORKDIR /app
 
 COPY --from=composer /app .
 
-ENTRYPOINT ["php", "-d", "memory_limit=-1", "vendor/bin/phpunit", "--configuration", "phpunit.xml"]
+ENTRYPOINT ["php", "-d", "xdebug.mode=coverage", "-d", "memory_limit=-1", "vendor/bin/phpunit", "--debug"]

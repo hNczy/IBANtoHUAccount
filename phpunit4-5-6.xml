@@ -2,7 +2,6 @@
         bootstrap="./vendor/autoload.php"
         colors="true"
         verbose="true"
-        debug="true"
 >
     <testsuites>
         <testsuite name="unit">
