@@ -1,6 +1,6 @@
 ARG PHP_VERSION
 
-FROM php:${PHP_VERSION} as base
+FROM php:${PHP_VERSION} AS base
 
 # Fix CA certificates & install PHP Xdebug extension
 RUN curl -sSL https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions -o - | sh -s \
@@ -12,7 +12,7 @@ RUN echo xdebug.var_display_max_data=-1 >> /usr/local/etc/php/conf.d/docker-php-
  && echo xdebug.var_display_max_children=-1 >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 
 
-FROM base as composer
+FROM base AS composer
 ARG COMPOSER_AUTH
 RUN [ ! -n "${COMPOSER_AUTH}" ] \
  && echo 'COMPOSER_AUTH environment is required for build ' \
