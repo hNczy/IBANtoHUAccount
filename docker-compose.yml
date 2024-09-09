@@ -46,3 +46,87 @@ services:
       - .:/app
       - /app/vendor
       - ./reports/php71:/app/reports
+
+  phpunit-php72:
+    build:
+      context: .
+      args:
+        - COMPOSER_AUTH
+        - PHP_VERSION=7.2.34
+    user: $DOCKER_USER
+    volumes:
+      - .:/app
+      - /app/vendor
+      - ./reports/php72:/app/reports
+
+  phpunit-php73:
+    build:
+      context: .
+      args:
+        - COMPOSER_AUTH
+        - PHP_VERSION=7.3.33
+    user: $DOCKER_USER
+    volumes:
+      - .:/app
+      - /app/vendor
+      - ./reports/php73:/app/reports
+
+  phpunit-php74:
+    build:
+      context: .
+      args:
+        - COMPOSER_AUTH
+        - PHP_VERSION=7.4.33
+    user: $DOCKER_USER
+    volumes:
+      - .:/app
+      - /app/vendor
+      - ./reports/php74:/app/reports
+
+  phpunit-php80:
+    build:
+      context: .
+      args:
+        - COMPOSER_AUTH
+        - PHP_VERSION=8.0.30
+    user: $DOCKER_USER
+    volumes:
+      - .:/app
+      - /app/vendor
+      - ./reports/php80:/app/reports
+
+  phpunit-php81:
+    build:
+      context: .
+      args:
+        - COMPOSER_AUTH
+        - PHP_VERSION=8.1.29
+    user: $DOCKER_USER
+    volumes:
+      - .:/app
+      - /app/vendor
+      - ./reports/php81:/app/reports
+
+  phpunit-php82:
+    build:
+      context: .
+      args:
+        - COMPOSER_AUTH
+        - PHP_VERSION=8.2.23
+    user: $DOCKER_USER
+    volumes:
+      - .:/app
+      - /app/vendor
+      - ./reports/php82:/app/reports
+
+  phpunit-php83:
+    build:
+      context: .
+      args:
+        - COMPOSER_AUTH
+        - PHP_VERSION=8.3.11
+    user: $DOCKER_USER
+    volumes:
+      - .:/app
+      - /app/vendor
+      - ./reports/php83:/app/reports
